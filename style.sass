@@ -1,0 +1,126 @@
+@import "reset"
+  
+$dark-blue: #060717
+$red: #CE000E
+$pegradiant: linear-gradient(-34deg, #7132E1 10%, #3843E6 78%, #3644E6 78%)
+$yellow: #FFD100
+$pink: #E4015C
+$green: #0CD2A3
+$dark-green: #05624C
+$purple: #8B0BD2
+$white: #FFFFFF
+$black : #000000
+$font: Open Sans, Helvetica, Arial, sans-serif
+$font-regular: 400
+$font-bold: 600
+$font-semibold: 700
+$font-extrabold: 800
+
+body
+  background-color: $dark-blue
+  font-family: $font
+  font-weight: $font-regular
+  color: $white
+  line-height: 24px
+  font-size: 14px
+  
+h1
+  font-weight: $font-bold
+  opacity: 0.71
+  font-size: 16px
+  line-height: 22px
+  margin-top: 13px
+  margin-bottom: 3px
+h2
+  font-weight: $font-extrabold
+  font-size: 34px
+  line-height: 40px
+h3
+  color: $green
+  font-size: 24px
+  line-height: 33px
+  margin-bottom: 24px
+h4
+  font-weight: $font-bold
+  font-size: 12px
+  opacity: 0.45
+  text-transform: uppercase
+h5
+  font-weight: $font-extrabold
+  font-size: 24px
+  margin-bottom: 6px
+
+a
+  color: $green
+
+header
+  max-width: 833px
+  text-align: center
+  padding: 102px 96px 91px 96px
+  margin-left: auto
+  margin-right: auto
+
+section
+  border-radius: 5px
+  padding: 30px 30px 0px 30px
+
+.long-cards
+  display: flex
+  justify-content: center
+  section:first-of-type
+    margin-right: 30px
+
+.large-card
+  width: 840px
+  height: 360px
+  margin-left: auto
+  margin-right: auto
+
+.margin-top
+  margin-top: 30px
+
+#profile
+  width: 122px
+  height: 100%
+  border-radius: 50%
+  border-color: $white
+  border-style: solid
+  border-width: 2px
+
+#betclic
+  background-color: $red
+
+#poleemploi
+  background: $pegradiant
+
+#formations
+  background-color: $yellow
+  color: $black
+
+#sunday
+  background-color: $pink
+
+#explicite
+  background-color: $green
+  color: $black
+
+#asura
+  background-color: $purple
+
+.card-long
+  width: 375px
+  height: 530px
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  img
+    width: 335px
+    height: 360px
+    align-self: flex-end
+
+address
+  background-color: $green
+  p
+    color: $dark-green
+  a
+    color: $black

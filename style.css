@@ -1,0 +1,183 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+ * v2.0 | 20110126
+ * License: none (public domain)
+ * Changed from CSS to SASS */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  background-color: #060717;
+  font-family: Open Sans, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 24px;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+}
+
+h1 {
+  font-weight: 600;
+  opacity: 0.71;
+  font-size: 16px;
+  line-height: 22px;
+  margin-top: 13px;
+  margin-bottom: 3px;
+}
+
+h2 {
+  font-weight: 800;
+  font-size: 34px;
+  line-height: 40px;
+}
+
+h3 {
+  color: #0CD2A3;
+  font-size: 24px;
+  line-height: 33px;
+  margin-bottom: 24px;
+}
+
+h4 {
+  font-weight: 600;
+  font-size: 12px;
+  opacity: 0.45;
+  text-transform: uppercase;
+}
+
+h5 {
+  font-weight: 800;
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+
+a {
+  color: #0CD2A3;
+}
+
+header {
+  max-width: 833px;
+  text-align: center;
+  padding: 102px 96px 91px 96px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section {
+  border-radius: 5px;
+  padding: 30px 30px 0px 30px;
+}
+
+.long-cards {
+  display: flex;
+  justify-content: center;
+}
+.long-cards section:first-of-type {
+  margin-right: 30px;
+}
+
+.large-card {
+  width: 840px;
+  height: 360px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.margin-top {
+  margin-top: 30px;
+}
+
+#profile {
+  width: 122px;
+  height: 100%;
+  border-radius: 50%;
+  border-color: #FFFFFF;
+  border-style: solid;
+  border-width: 2px;
+}
+
+#betclic {
+  background-color: #CE000E;
+}
+
+#poleemploi {
+  background: linear-gradient(-34deg, #7132E1 10%, #3843E6 78%, #3644E6 78%);
+}
+
+#formations {
+  background-color: #FFD100;
+  color: #000000;
+}
+
+#sunday {
+  background-color: #E4015C;
+}
+
+#explicite {
+  background-color: #0CD2A3;
+  color: #000000;
+}
+
+#asura {
+  background-color: #8B0BD2;
+}
+
+.card-long {
+  width: 375px;
+  height: 530px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-long img {
+  width: 335px;
+  height: 360px;
+  align-self: flex-end;
+}
+
+address {
+  background-color: #0CD2A3;
+}
+address p {
+  color: #05624C;
+}
+address a {
+  color: #000000;
+}
+
+/*# sourceMappingURL=style.css.map */

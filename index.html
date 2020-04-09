@@ -11,6 +11,7 @@
         <!-- TODO: -->
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
@@ -18,124 +19,142 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         
-            <img src="img/symbols-avatar.png" alt="Noémie Rivière">
-            <h4>Noémie M. Rivière · DESIGNER À BORDEAUX</h4>
-            <h1>Senior Product Designer UX/UI</h1>
-            <h2>Créative, proactive et rigoureuse, je m'épanouis dans le challenge.</h2>
-            
-            <section>
-                <h5>Applications Mobiles / Web</h5>
-                <h2>Betclic Sport</h2>
-                <p>Amélioration de l'interface mobile et web de Betclic Sport.</p>
-                <img src="img/project_image_betclic.png" alt="Noémie Rivière">
+        <header>
+            <img id="profile" src="img/noemie.jpg" alt="Noémie Rivière">
+            <h1>Noémie M. Rivière • DESIGNER À BORDEAUX</h1>
+            <h2>Senior Product Designer UX/UI</h2>
+            <h3>Créative, proactive et rigoureuse, je m'épanouis dans le challenge.</h3>
+        </header>
+
+        <div class="long-cards">
+            <section id="betclic" class="card-long">
+                <div>
+                    <h4>Applications Mobiles / Web</h4>
+                    <h5>Betclic Sport</h5>
+                    <p>Amélioration de l'interface mobile et web de Betclic Sport.</p>
+                </div>
+                <img src="img/project_image_betclic.png" alt="Betclic">
             </section>
 
-            <section>
-                <h5>Applications mobiles</h5>
-                <h2>Pôle Emploi</h2>
-                <p>Création d'un bouqet d'applications, afin que chaque application réponde à des besoins utilisateurs 
-                    différents (Mon Espace, Mes offres, Évènements, Ma formation & Je Recrute)</p>
-                <img src="img/project_image_pe.png" alt="Noémie Rivière">
+            <section id="poleemploi" class="card-long">
+                <div>
+                    <h4>Applications mobiles</h4>
+                    <h5>Pôle Emploi</h5>
+                    <p>Création d'un bouqet d'applications, afin que chaque application réponde à des besoins utilisateurs 
+                        différents (Mon Espace, Mes offres, Évènements, Ma formation & Je Recrute)</p>
+                </div>
+                <img src="img/project_image_pe.png" alt="Pôle Emploi">
             </section>
+        </div>
 
-            <section>
-                <h5>Ateliers/Formations</h5>
-                <h2>Formations</h2>
+        <section id="formations" class="large-card margin-top">
+            <div>
+                <h4>Ateliers/Formations</h4>
+                <h5>Formations</h5>
                 <p>Les bases de <strong>l'ergonomie</strong> (Gestalt, Fitts...), présentation & atelier sur 
                     <strong>Sketch</strong> (principes de bases et mise en pratique en créant des icônes d'application),
-                     présentation & atelier sur le code <strong>HTML/CSS</strong> (principes de base et mise en pratique
-                      en créant une page de présentation d'un film), atelier sur l'expérience utilisateur et la RGPD 
-                      (reprise d'un atelier FLUPA, sur créer la pire expérience utilisateurs avec les données)</p>
-                <img src="https://via.placeholder.com/305x360" alt="Noémie Rivière">
+                        présentation & atelier sur le code <strong>HTML/CSS</strong> (principes de base et mise en pratique
+                        en créant une page de présentation d'un film), atelier sur l'expérience utilisateur et la RGPD 
+                        (reprise d'un atelier FLUPA, sur créer la pire expérience utilisateurs avec les données)</p>
+            </div>
+            <img src="img/project_formations.png" alt="Formations">
+        </section>
+
+        <div class="long-cards margin-top">
+            <section id="sunday" class="card-long">
+                <div>
+                    <h4>Application mobile, TV et site web</h4>
+                    <h5>Sunday</h5>
+                    <p>Dans un timing serré, j'ai conçu l'interface de l'application TV avec comme cible d'utilisateurs les 
+                        Séniors, l'application mobile, cette fois destinée à un public plus jeune et le site web pour les 
+                        professionnels.</p>
+                </div>
+                <img src="img/project_image_sunday.png" alt="Sunday">
             </section>
 
-            <section>
-                <h5>Application mobile, TV et site web</h5>
-                <h2>Sunday</h2>
-                <p>Dans un timing serré, j'ai conçu l'interface de l'application TV avec comme cible d'utilisateurs les 
-                    Séniors, l'application mobile, cette fois destinée à un public plus jeune et le site web pour les 
-                    professionnels.</p>
-                <img src="img/project_image_sunday.png" alt="Noémie Rivière">
+            <section id="explicite" class="card-long">
+                <div>
+                    <h4>Applications mobile</h4>
+                    <h5>Explicite</h5>
+                    <p>Réalisation d’une application multi-plateforme fluides laissant place aux photos, l’expérience 
+                        complète du bouton de connaissance avec ses interfaces de consultation et d’édition ainsi que 
+                        l’outil sur mesure d’édition d’articles.</p>
+                </div>
+                <img src="img/project_image_explicite.png" alt="Explicite">
             </section>
+        </div>
 
-            <section>
-                <h5>Applications mobile</h5>
-                <h2>Explicite</h2>
-                <p>Réalisation d’une application multi-plateforme fluides laissant place aux photos, l’expérience 
-                    complète du bouton de connaissance avec ses interfaces de consultation et d’édition ainsi que 
-                    l’outil sur mesure d’édition d’articles.</p>
-                <img src="img/project_image_explicite.png" alt="Noémie Rivière">
-            </section>
-
-            <section>
-                <h5>Communication & Site web</h5>
-                <h2>Association ASURA</h2>
+        <section id="asura" class="large-card margin-top">
+            <div>
+                <h4>Communication & Site web</h4>
+                <h5>Association ASURA</h5>
                 <p>Souhaitant m’investir dans la protection animale en mettant à profit mes compétences artistiques et 
                     techniques je suis devenue bénévole au sein d’associations de protection animale en Aquitaine.</p>
                 <p>L’association ASURA qui a pour but de sauver, soigner, mettre en règle et replacer à l’adoption les 
                     chats pris en charge. Au sein de l’association j’ai créé l’identité visuelle et sa déclinaison pour 
                     les différents supports de communication, et mis en place leur nouveau site internet sur Wordpress.</p>
-                <img src="https://via.placeholder.com/305x360" alt="Noémie Rivière">
-            </section>
+            </div>
+            <img src="img/cats.png" alt="Asura">
+        </section>
 
-            <a href="https://www.pinterest.fr/">Voir plus de projets sur Pinterest</a>
+        <a href="https://www.pinterest.fr/">Voir plus de projets sur Pinterest</a>
 
-            <hr>
+        <hr>
 
-            <h3>Nous avons travaillé ensemble</h3>
+        <h4>Nous avons travaillé ensemble</h4>
+        <ul>
+            <li>Pôle Emploi</li>
+            <li>Aquitaine Europe Communication</li>
+            <li>Mairie de Bordeaux</li>
+            <li>33 entrepreneurs</li>
+            <li>jobijoba</li>
+            <li>ERDF</li>
+            <li>Grenelle de l'environnement</li>
+            <li>Suez Lyonnaise des Eaux</li>
+            <li>Minisitère des droits des femmes</li>
+            <li>Explicite, jounalistes associés</li>
+            <li>Sunday</li>
+            <li>JeStocke</li>
+            <li>PMU</li>
+            <li>Atos</li>
+            <li>Cultura</li>
+            <li>Dronisos</li>
+            <li>Geeksters</li>
+            <li>Fidme</li>
+            <li>Cetelem</li>
+        </ul>
+
+        <hr>
+
+        <h4>Compétences</h4>
+        <ul>
+            <li>UX design mobile/web/TV</li>
+            <li>UI design mobile/web/TV</li>
+            <li>Prototypage</li>
+            <li>Intégration</li>
+            <li>Print design</li>
+            <li>Logotype</li>
+            <li>Méthodes agiles</li>
+            <li>Design system</li>
+            <li>Datavisualisation</li>
+        </ul>
+
+        <address>
+            <h4>Me contacter</h4>
+            <p>Vous pouvez me contacte pour xxx par <a href="">message privée sur LinkedIn</a> ou directement 
+                <a href="">par mail</a>.</p>
+        </address>
+
+        <footer>
             <ul>
-                <li>Pôle Emploi</li>
-                <li>Aquitaine Europe Communication</li>
-                <li>Mairie de Bordeaux</li>
-                <li>33 entrepreneurs</li>
-                <li>jobijoba</li>
-                <li>ERDF</li>
-                <li>Grenelle de l'environnement</li>
-                <li>Suez Lyonnaise des Eaux</li>
-                <li>Minisitère des droits des femmes</li>
-                <li>Explicite, jounalistes associés</li>
-                <li>Sunday</li>
-                <li>JeStocke</li>
-                <li>PMU</li>
-                <li>Atos</li>
-                <li>Cultura</li>
-                <li>Dronisos</li>
-                <li>Geeksters</li>
-                <li>Fidme</li>
-                <li>Cetelem</li>
+                <li>Twitter</li>
+                <li>LinkedIn</li>
+                <li>Dribbble</li>
+                <li>Pinterest</li>
+                <li>Instagram</li>
             </ul>
-
-            <hr>
-
-            <h3>Compétences</h3>
-            <ul>
-                <li>UX design mobile/web/TV</li>
-                <li>UI design mobile/web/TV</li>
-                <li>Prototypage</li>
-                <li>Intégration</li>
-                <li>Print design</li>
-                <li>Logotype</li>
-                <li>Méthodes agiles</li>
-                <li>Design system</li>
-                <li>Datavisualisation</li>
-            </ul>
-
-            <section>
-                <h3>Me contacter</h3>
-                <p>Vous pouvez me contacte pour xxx par <a href="">message privée sur LinkedIn</a> ou directement 
-                    <a href="">par mail</a>.</p>
-            </section>
-
-            <footer>
-                <ul>
-                    <li>Twitter</li>
-                    <li>LinkedIn</li>
-                    <li>Dribbble</li>
-                    <li>Pinterest</li>
-                    <li>Instagram</li>
-                </ul>
-                <p>Made with ❤️ in 2020 | Code by <a href="https://www.sebcarnelos.fr">Seb Carnélos</a></p>
-            </footer>
+            <small>Made with ❤️ in 2020 | Code by <a href="https://www.sebcarnelos.fr">Seb Carnélos</a></small>
+        </footer>
 
         <script src="" async defer></script>
     </body>
