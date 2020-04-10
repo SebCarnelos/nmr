@@ -1,5 +1,7 @@
+// No link on skills click
 const skills = document.getElementsByClassName('skills');
-
-// skills.addEventListener('click', (callback) => {
-//     callback.preventDefault();
-// });
+for (let skill of skills) {
+    skill.addEventListener('click', (callback) => {
+        callback.preventDefault();
+    });
+}
