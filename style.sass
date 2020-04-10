@@ -10,10 +10,11 @@ $dark-green: #05624C
 $purple: #8B0BD2
 $white: #FFFFFF
 $black : #000000
+$light-grey: #E9E9E9
 $font: Open Sans, Helvetica, Arial, sans-serif
 $font-regular: 400
-$font-bold: 600
-$font-semibold: 700
+$font-semibold: 600
+$font-bold: 700
 $font-extrabold: 800
 
 body
@@ -50,9 +51,6 @@ h5
   font-size: 24px
   margin-bottom: 6px
 
-a
-  color: $green
-
 header
   max-width: 833px
   text-align: center
@@ -69,12 +67,28 @@ section
   justify-content: center
   section:first-of-type
     margin-right: 30px
+  section
+    div:last-child
+      height: 100%
+      background-size: 335px 360px
+      background-repeat: no-repeat
+      background-position: right bottom
 
 .large-card
-  width: 840px
+  max-width: 840px
   height: 360px
   margin-left: auto
   margin-right: auto
+  display: flex
+  background-position-x: right
+  background-repeat: no-repeat
+  background-size: contain
+  display: flex
+  justify-content: space-between
+  div:first-child
+    max-width: 560px
+  div:last-child
+    width: 280px
 
 .margin-top
   margin-top: 30px
@@ -89,38 +103,131 @@ section
 
 #betclic
   background-color: $red
+  div:last-child
+    background-image: url('img/project_image_betclic.png')
 
 #poleemploi
   background: $pegradiant
+  div:last-child
+    background-image: url('img/project_image_pe.png')
 
 #formations
   background-color: $yellow
   color: $black
+  background-image: url('img/project_formations.png')
 
 #sunday
   background-color: $pink
+  div:last-child
+    background-image: url('img/project_image_sunday.png')
 
 #explicite
   background-color: $green
   color: $black
+  div:last-child
+    background-image: url('img/project_image_explicite.png')
 
 #asura
   background-color: $purple
+  div:first-child
+    max-width: 530px
+  div:last-child
+    background-image: url('img/cats.png')
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: right bottom
 
 .card-long
-  width: 375px
+  max-width: 375px
   height: 530px
   display: flex
   flex-direction: column
   justify-content: space-between
-  img
-    width: 335px
-    height: 360px
-    align-self: flex-end
+
+strong
+  font-weight: $font-bold
+
+#pinterest
+  text-align: center
+  margin-top: 62px
+  margin-bottom: 61px
+  a
+    color: $green
+    font-weight: 700
+    text-decoration-line: none
+    line-height: 19px
+    padding: 12px 22px 11px 21px
+    border: solid
+    border-width: 2px
+    border-radius: 23px
+
+.container
+  margin-left: auto
+  margin-right: auto
+  color: $white
+  hr
+    border-width: 1px
+    border-color: $white
+    width: 896px
+    opacity: 0.16
+    margin-bottom: 70px
+    margin-top: 0px
+    &:last-of-type
+      margin-top: 70px
+  h4
+    text-transform: none
+    color: $white
+    opacity: 1
+    font-weight: $font-extrabold
+    font-size: 22px
+  li
+    display: inline
+    &:not(:last-of-type)::after
+      content: " •"
+    a
+      color: $light-grey
+      text-decoration-line: none
+      &:hover
+        color: $green
+
+.out-of-cards
+  max-width: 900px
+  text-align: center
+  h4
+    margin-bottom: 20px
+
 
 address
+  text-align: left
   background-color: $green
+  padding: 50px 62px
+  margin-top: 70px
+  margin-bottom: 29px
+  .container
+    max-width: 900px
+    h4
+      margin-bottom: 0px
   p
     color: $dark-green
+    font-weight: 600
   a
     color: $black
+    font-weight: 700
+
+footer
+  font-size: 12px
+  div:first-child
+    max-width: 900px
+    display: flex
+    justify-content: space-between
+  .container
+    color: $light-grey
+    margin-bottom: 30px
+    li
+      &:not(:last-of-type)::after
+        content: " |"
+  a
+    color: $light-grey
+    &:hover
+      color: $green
+      text-decoration-line: none

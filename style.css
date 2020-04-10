@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
  * v2.0 | 20110126
  * License: none (public domain)
@@ -45,14 +46,10 @@ body {
   color: #FFFFFF;
   line-height: 24px;
   font-size: 14px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
 }
 
 h1 {
-  font-weight: 600;
+  font-weight: 700;
   opacity: 0.71;
   font-size: 16px;
   line-height: 22px;
@@ -74,7 +71,7 @@ h3 {
 }
 
 h4 {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 12px;
   opacity: 0.45;
   text-transform: uppercase;
@@ -84,10 +81,6 @@ h5 {
   font-weight: 800;
   font-size: 24px;
   margin-bottom: 6px;
-}
-
-a {
-  color: #0CD2A3;
 }
 
 header {
@@ -110,12 +103,30 @@ section {
 .long-cards section:first-of-type {
   margin-right: 30px;
 }
+.long-cards section div:last-child {
+  height: 100%;
+  background-size: 335px 360px;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
 
 .large-card {
-  width: 840px;
+  max-width: 840px;
   height: 360px;
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  background-position-x: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  justify-content: space-between;
+}
+.large-card div:first-child {
+  max-width: 560px;
+}
+.large-card div:last-child {
+  width: 280px;
 }
 
 .margin-top {
@@ -134,50 +145,167 @@ section {
 #betclic {
   background-color: #CE000E;
 }
+#betclic div:last-child {
+  background-image: url("img/project_image_betclic.png");
+}
 
 #poleemploi {
   background: linear-gradient(-34deg, #7132E1 10%, #3843E6 78%, #3644E6 78%);
+}
+#poleemploi div:last-child {
+  background-image: url("img/project_image_pe.png");
 }
 
 #formations {
   background-color: #FFD100;
   color: #000000;
+  background-image: url("img/project_formations.png");
 }
 
 #sunday {
   background-color: #E4015C;
+}
+#sunday div:last-child {
+  background-image: url("img/project_image_sunday.png");
 }
 
 #explicite {
   background-color: #0CD2A3;
   color: #000000;
 }
+#explicite div:last-child {
+  background-image: url("img/project_image_explicite.png");
+}
 
 #asura {
   background-color: #8B0BD2;
 }
+#asura div:first-child {
+  max-width: 530px;
+}
+#asura div:last-child {
+  background-image: url("img/cats.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right bottom;
+}
 
 .card-long {
-  width: 375px;
+  max-width: 375px;
   height: 530px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.card-long img {
-  width: 335px;
-  height: 360px;
-  align-self: flex-end;
+
+strong {
+  font-weight: 700;
+}
+
+#pinterest {
+  text-align: center;
+  margin-top: 62px;
+  margin-bottom: 61px;
+}
+#pinterest a {
+  color: #0CD2A3;
+  font-weight: 700;
+  text-decoration-line: none;
+  line-height: 19px;
+  padding: 12px 22px 11px 21px;
+  border: solid;
+  border-width: 2px;
+  border-radius: 23px;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  color: #FFFFFF;
+}
+.container hr {
+  border-width: 1px;
+  border-color: #FFFFFF;
+  width: 896px;
+  opacity: 0.16;
+  margin-bottom: 70px;
+  margin-top: 0px;
+}
+.container hr:last-of-type {
+  margin-top: 70px;
+}
+.container h4 {
+  text-transform: none;
+  color: #FFFFFF;
+  opacity: 1;
+  font-weight: 800;
+  font-size: 22px;
+}
+.container li {
+  display: inline;
+}
+.container li:not(:last-of-type)::after {
+  content: " •";
+}
+.container li a {
+  color: #E9E9E9;
+  text-decoration-line: none;
+}
+.container li a:hover {
+  color: #0CD2A3;
+}
+
+.out-of-cards {
+  max-width: 900px;
+  text-align: center;
+}
+.out-of-cards h4 {
+  margin-bottom: 20px;
 }
 
 address {
+  text-align: left;
   background-color: #0CD2A3;
+  padding: 50px 62px;
+  margin-top: 70px;
+  margin-bottom: 29px;
+}
+address .container {
+  max-width: 900px;
+}
+address .container h4 {
+  margin-bottom: 0px;
 }
 address p {
   color: #05624C;
+  font-weight: 600;
 }
 address a {
   color: #000000;
+  font-weight: 700;
+}
+
+footer {
+  font-size: 12px;
+}
+footer div:first-child {
+  max-width: 900px;
+  display: flex;
+  justify-content: space-between;
+}
+footer .container {
+  color: #E9E9E9;
+  margin-bottom: 30px;
+}
+footer .container li:not(:last-of-type)::after {
+  content: " |";
+}
+footer a {
+  color: #E9E9E9;
+}
+footer a:hover {
+  color: #0CD2A3;
+  text-decoration-line: none;
 }
 
 /*# sourceMappingURL=style.css.map */
