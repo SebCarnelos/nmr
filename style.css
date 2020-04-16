@@ -39,6 +39,10 @@ table {
   border-spacing: 0;
 }
 
+hr {
+  border-width: 0;
+}
+
 body {
   background-color: #060717;
   font-family: Open Sans, Helvetica, Arial, sans-serif;
@@ -216,6 +220,20 @@ strong {
   border: solid;
   border-width: 2px;
   border-radius: 23px;
+  background: none;
+  transition-property: color, border-color, background-color;
+  transition-duration: 300ms;
+  transition-timing-function: ease-out;
+}
+#pinterest a:hover {
+  color: #000000;
+  border-color: #0CD2A3;
+  background-color: #0CD2A3;
+}
+#pinterest a:active {
+  transition-property: none;
+  background-color: #088a6b;
+  border-color: #088a6b;
 }
 
 .container {
@@ -224,7 +242,7 @@ strong {
   color: #FFFFFF;
 }
 .container hr {
-  border-width: 1px;
+  border-top-width: 1px;
   border-color: #FFFFFF;
   width: 896px;
   opacity: 0.16;
