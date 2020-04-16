@@ -222,7 +222,7 @@ strong {
   border-radius: 23px;
   background: none;
   transition-property: color, border-color, background-color;
-  transition-duration: 300ms;
+  transition-duration: 500ms;
   transition-timing-function: ease-out;
 }
 #pinterest a:hover {
@@ -301,6 +301,9 @@ address p {
 address a {
   color: #000000;
   font-weight: 700;
+}
+address a:hover {
+  text-decoration: none;
 }
 
 footer {
