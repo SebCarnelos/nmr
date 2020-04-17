@@ -18,8 +18,14 @@ $font-regular: 400
 $font-semibold: 600
 $font-bold: 700
 $font-extrabold: 800
+$breakpoint: 700px
+
 
 body
+  margin-top: 102px
+  @media (max-width: $breakpoint)
+    margin-top: 72px
+  margin-bottom: 30px
   background-color: $dark-blue
   font-family: $font
   font-weight: $font-regular
@@ -27,6 +33,14 @@ body
   line-height: 24px
   font-size: 14px
   
+
+.body-container
+  margin-left: 62px
+  margin-right: 62px
+  @media (max-width: $breakpoint)
+    margin-left: 20px
+    margin-right: 20px
+
 h1
   font-weight: $font-bold
   opacity: 0.71
@@ -42,43 +56,61 @@ h3
   color: $green
   font-size: 24px
   line-height: 33px
-  margin-bottom: 24px
 h4
   font-weight: $font-bold
   font-size: 12px
   opacity: 0.45
   text-transform: uppercase
 h5
-  font-weight: $font-extrabold
+  font-weighnt: $font-extrabold
   font-size: 24px
   margin-bottom: 6px
 
 header
   max-width: 833px
   text-align: center
-  padding: 102px 96px 91px 96px
   margin-left: auto
   margin-right: auto
+  padding-bottom: 115px
+  @media (max-width: $breakpoint)
+    padding-bottom: 80px
 
 section
   border-radius: 5px
   padding: 30px 30px 0px 30px
+  div:last-child
+    margin-left: -30px
+  @media (max-width: $breakpoint)
+    margin-bottom: 20px
 
 .long-cards
-  display: flex
-  justify-content: center
-  section:first-of-type
-    margin-right: 30px
+  @media (min-width: $breakpoint)
+    display: flex
+    justify-content: center
+    section:first-of-type
+        margin-right: 30px
   section
     div:last-child
-      height: 100%
       background-size: 335px 360px
       background-repeat: no-repeat
       background-position: right bottom
+      height: 360px
+
+.card-long
+  @media (min-width: $breakpoint)
+    max-width: 375px
+    height: 530px
+  @media (max-width: $breakpoint)
+    min-height: 590px 
+  display: flex
+  flex-direction: column
+  justify-content: space-between
 
 .large-card
   max-width: 840px
-  height: 360px
+  min-height: 360px
+  @media (max-width: $breakpoint)
+    min-height: 590px 
   margin-left: auto
   margin-right: auto
   display: flex
@@ -92,8 +124,9 @@ section
   div:last-child
     width: 280px
 
-.margin-top
-  margin-top: 30px
+@media (min-width: $breakpoint)
+  .margin-top
+    margin-top: 30px
 
 #profile
   width: 122px
@@ -139,13 +172,6 @@ section
     background-size: contain
     background-position: right bottom
 
-.card-long
-  max-width: 375px
-  height: 530px
-  display: flex
-  flex-direction: column
-  justify-content: space-between
-
 strong
   font-weight: $font-bold
 
@@ -183,7 +209,7 @@ strong
   hr
     border-top-width: 1px
     border-color: $white
-    width: 896px
+    max-width: 896px
     opacity: 0.16
     margin-bottom: 70px
     margin-top: 0px
@@ -211,13 +237,15 @@ strong
   h4
     margin-bottom: 20px
 
-
 address
   text-align: left
   background-color: $green
   padding: 50px 62px
   margin-top: 70px
   margin-bottom: 29px
+  @media (max-width: $breakpoint)
+    margin-top: 42px
+    margin-bottom: 32px
   .container
     max-width: 900px
     h4
@@ -235,11 +263,16 @@ footer
   font-size: 12px
   div:first-child
     max-width: 900px
-    display: flex
-    justify-content: space-between
+    @media (max-width: $breakpoint)
+      text-align: center
+      ul
+        margin-bottom: 6px
+    @media (min-width: $breakpoint)
+      display: flex
+      justify-content: space-between
+
   .container
     color: $light-grey
-    margin-bottom: 30px
     li
       &:not(:last-of-type)::after
         content: ' |'

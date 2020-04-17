@@ -1,3 +1,5 @@
+/*** Skills link management ***/
+
 const green = '#0CD2A3';
 
 const skillsList = {
@@ -73,3 +75,18 @@ for (let skill of skills) {
         }
     });
 }
+
+
+/*** Mail hider ***/
+const action = "mailto:";
+const user = "contact";
+const domain = "noemieriviere";
+const extention = "com";
+const mailLink = document.getElementById('mail');
+mailLink.addEventListener('mouseover', () => {
+    mailLink.setAttribute('href', action + user + '@' + domain + '.' + extention);
+});
+mailLink.addEventListener('mouseout', () => {
+    mailLink.setAttribute('href', "");
+});
+

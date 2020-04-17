@@ -44,12 +44,30 @@ hr {
 }
 
 body {
+  margin-top: 102px;
+  margin-bottom: 30px;
   background-color: #060717;
   font-family: Open Sans, Helvetica, Arial, sans-serif;
   font-weight: 400;
   color: #FFFFFF;
   line-height: 24px;
   font-size: 14px;
+}
+@media (max-width: 700px) {
+  body {
+    margin-top: 72px;
+  }
+}
+
+.body-container {
+  margin-left: 62px;
+  margin-right: 62px;
+}
+@media (max-width: 700px) {
+  .body-container {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }
 
 h1 {
@@ -71,7 +89,6 @@ h3 {
   color: #0CD2A3;
   font-size: 24px;
   line-height: 33px;
-  margin-bottom: 24px;
 }
 
 h4 {
@@ -82,7 +99,7 @@ h4 {
 }
 
 h5 {
-  font-weight: 800;
+  font-weighnt: 800;
   font-size: 24px;
   margin-bottom: 6px;
 }
@@ -90,33 +107,65 @@ h5 {
 header {
   max-width: 833px;
   text-align: center;
-  padding: 102px 96px 91px 96px;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 115px;
+}
+@media (max-width: 700px) {
+  header {
+    padding-bottom: 80px;
+  }
 }
 
 section {
   border-radius: 5px;
   padding: 30px 30px 0px 30px;
 }
-
-.long-cards {
-  display: flex;
-  justify-content: center;
+section div:last-child {
+  margin-left: -30px;
 }
-.long-cards section:first-of-type {
-  margin-right: 30px;
+@media (max-width: 700px) {
+  section {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 700px) {
+  .long-cards {
+    display: flex;
+    justify-content: center;
+  }
+  .long-cards section:first-of-type {
+    margin-right: 30px;
+  }
 }
 .long-cards section div:last-child {
-  height: 100%;
   background-size: 335px 360px;
   background-repeat: no-repeat;
   background-position: right bottom;
+  height: 360px;
+}
+
+.card-long {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (min-width: 700px) {
+  .card-long {
+    max-width: 375px;
+    height: 530px;
+  }
+}
+@media (max-width: 700px) {
+  .card-long {
+    min-height: 590px;
+  }
 }
 
 .large-card {
   max-width: 840px;
-  height: 360px;
+  min-height: 360px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -126,6 +175,11 @@ section {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 700px) {
+  .large-card {
+    min-height: 590px;
+  }
+}
 .large-card div:first-child {
   max-width: 560px;
 }
@@ -133,10 +187,11 @@ section {
   width: 280px;
 }
 
-.margin-top {
-  margin-top: 30px;
+@media (min-width: 700px) {
+  .margin-top {
+    margin-top: 30px;
+  }
 }
-
 #profile {
   width: 122px;
   height: 100%;
@@ -194,14 +249,6 @@ section {
   background-position: right bottom;
 }
 
-.card-long {
-  max-width: 375px;
-  height: 530px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
 strong {
   font-weight: 700;
 }
@@ -244,7 +291,7 @@ strong {
 .container hr {
   border-top-width: 1px;
   border-color: #FFFFFF;
-  width: 896px;
+  max-width: 896px;
   opacity: 0.16;
   margin-bottom: 70px;
   margin-top: 0px;
@@ -288,6 +335,12 @@ address {
   margin-top: 70px;
   margin-bottom: 29px;
 }
+@media (max-width: 700px) {
+  address {
+    margin-top: 42px;
+    margin-bottom: 32px;
+  }
+}
 address .container {
   max-width: 900px;
 }
@@ -311,12 +364,23 @@ footer {
 }
 footer div:first-child {
   max-width: 900px;
-  display: flex;
-  justify-content: space-between;
+}
+@media (max-width: 700px) {
+  footer div:first-child {
+    text-align: center;
+  }
+  footer div:first-child ul {
+    margin-bottom: 6px;
+  }
+}
+@media (min-width: 700px) {
+  footer div:first-child {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 footer .container {
   color: #E9E9E9;
-  margin-bottom: 30px;
 }
 footer .container li:not(:last-of-type)::after {
   content: " |";
