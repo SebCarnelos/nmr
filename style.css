@@ -232,8 +232,8 @@ strong {
 }
 #pinterest a:active {
   transition-property: none;
-  background-color: #088a6b;
-  border-color: #088a6b;
+  background-color: #0ab58d;
+  border-color: #0ab58d;
 }
 
 .container {
@@ -303,7 +303,7 @@ address a {
   font-weight: 700;
 }
 address a:hover {
-  text-decoration: none;
+  text-decoration-line: none;
 }
 
 footer {
@@ -323,10 +323,10 @@ footer .container li:not(:last-of-type)::after {
 }
 footer a {
   color: #E9E9E9;
+  text-decoration-line: none;
 }
 footer a:hover {
   color: #0CD2A3;
-  text-decoration-line: none;
 }
 
 /*# sourceMappingURL=style.css.map */
