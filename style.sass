@@ -18,12 +18,15 @@ $font-regular: 400
 $font-semibold: 600
 $font-bold: 700
 $font-extrabold: 800
-$breakpoint: 700px
+// $breakpoint-large: 960px
+$breakpoint-medium: 750px
+$breakpoint-medium-minus1: 749px
+$breakpoint-small: 576px
 
 
 body
   margin-top: 102px
-  @media (max-width: $breakpoint)
+  @media (max-width: $breakpoint-medium)
     margin-top: 72px
   margin-bottom: 30px
   background-color: $dark-blue
@@ -37,7 +40,7 @@ body
 .body-container
   margin-left: 62px
   margin-right: 62px
-  @media (max-width: $breakpoint)
+  @media (max-width: $breakpoint-small)
     margin-left: 20px
     margin-right: 20px
 
@@ -72,17 +75,17 @@ header
   margin-left: auto
   margin-right: auto
   padding-bottom: 115px
-  @media (max-width: $breakpoint)
+  @media (max-width: $breakpoint-medium)
     padding-bottom: 80px
 
 section
   border-radius: 5px
   padding: 30px 30px 0px 30px
-  @media (max-width: $breakpoint)
+  @media (max-width: $breakpoint-medium)
     margin-bottom: 20px
 
 .long-cards
-  @media (min-width: $breakpoint)
+  @media (min-width: $breakpoint-medium)
     display: flex
     justify-content: center
     section:first-of-type
@@ -96,11 +99,11 @@ section
       margin-left: -30px
 
 .card-long
-  @media (min-width: $breakpoint)
+  @media (min-width: $breakpoint-medium)
     max-width: 375px
-    height: 530px
-  @media (max-width: $breakpoint)
-    min-height: 590px 
+    height: 530px // TODO: à modifier selon textes définitifs
+  @media (max-width: $breakpoint-medium)
+    min-height: 590px
   display: flex
   flex-direction: column
   justify-content: space-between
@@ -108,27 +111,27 @@ section
 .large-card
   max-width: 840px
   min-height: 360px
-  @media (max-width: $breakpoint)
-    min-height: 590px 
+  // @media (max-width: $breakpoint-medium)
+  //   min-height: 590px 
   margin-left: auto
   margin-right: auto
   background-position-x: right
   background-repeat: no-repeat
   background-size: contain
-  @media (min-width: $breakpoint)
+  @media (min-width: $breakpoint-medium)
     display: flex
     justify-content: space-between
   div:first-child
     max-width: 560px
-    margin-bottom: 30px
+    // margin-bottom: 30px
   div:last-child
-    @media (min-width: $breakpoint)
+    @media (min-width: $breakpoint-medium)
       width: 280px
-    @media (max-width: $breakpoint)
+    @media (max-width: $breakpoint-medium)
       height: 360px
 
 
-@media (min-width: $breakpoint)
+@media (min-width: $breakpoint-medium)
   .margin-top
     margin-top: 30px
 
@@ -153,7 +156,18 @@ section
 #formations
   background-color: $yellow
   color: $black
-  background-image: url('img/project_formations.png')
+  @media (min-width: $breakpoint-medium)
+    background-image: url('img/project_formations.png')
+    div:last-child
+      margin-left: 27px
+      flex: 0 0 18em
+  @media (max-width: $breakpoint-medium-minus1)
+    div:last-child
+      background-image: url('img/project_formations_mobile.png')
+      margin: 0 -30px
+      background-size: contain
+      background-repeat: no-repeat
+      background-position-y: center
 
 #sunday
   background-color: $pink
@@ -173,8 +187,8 @@ section
     background-repeat: no-repeat
     background-size: contain
     background-position: right bottom
-    flex: 0 0 33%
-    @media (min-width: $breakpoint)
+    flex: 0 0 22em
+    @media (min-width: $breakpoint-medium)
       margin-left:20px
 
 strong
@@ -248,7 +262,7 @@ address
   padding: 50px 62px
   margin-top: 70px
   margin-bottom: 29px
-  @media (max-width: $breakpoint)
+  @media (max-width: $breakpoint-medium)
     margin-top: 42px
     margin-bottom: 32px
   .container
@@ -268,11 +282,11 @@ footer
   font-size: 12px
   div:first-child
     max-width: 900px
-    @media (max-width: $breakpoint)
+    @media (max-width: $breakpoint-medium)
       text-align: center
       ul
         margin-bottom: 6px
-    @media (min-width: $breakpoint)
+    @media (min-width: $breakpoint-medium)
       display: flex
       justify-content: space-between
 
