@@ -18,10 +18,10 @@ $font-regular: 400
 $font-semibold: 600
 $font-bold: 700
 $font-extrabold: 800
-// $breakpoint-large: 960px
 $breakpoint-medium: 750px
 $breakpoint-medium-minus1: 749px
 $breakpoint-small: 576px
+$breakpoint-extra-small: 402px
 
 
 body
@@ -111,8 +111,6 @@ section
 .large-card
   max-width: 840px
   min-height: 360px
-  // @media (max-width: $breakpoint-medium)
-  //   min-height: 590px 
   margin-left: auto
   margin-right: auto
   background-position-x: right
@@ -123,12 +121,10 @@ section
     justify-content: space-between
   div:first-child
     max-width: 560px
-    margin-bottom: 30px
   div:last-child
-    @media (min-width: $breakpoint-medium)
-      width: 280px
-    @media (max-width: $breakpoint-medium)
-      height: 360px
+    @media (max-width: $breakpoint-medium-minus1)
+      // height: 360px
+      height: 260px
 
 
 @media (min-width: $breakpoint-medium)
@@ -156,18 +152,25 @@ section
 #formations
   background-color: $yellow
   color: $black
+  div:last-child
+    background-size: contain
+    background-repeat: no-repeat
+    background-position-y: center
   @media (min-width: $breakpoint-medium)
-    background-image: url('img/project_formations.png')
     div:last-child
+      background-image: url('img/project_formations.png')
       margin-left: 27px
+      margin-top: -30px
       flex: 0 0 18em
   @media (max-width: $breakpoint-medium-minus1)
     div:last-child
       background-image: url('img/project_formations_mobile.png')
       margin: 0 -30px
-      background-size: contain
-      background-repeat: no-repeat
-      background-position-y: center
+  @media (max-width: $breakpoint-extra-small)
+    div:last-child
+      height: 170px
+
+      
 
 #sunday
   background-color: $pink
@@ -182,6 +185,8 @@ section
 
 #asura
   background-color: $purple
+  div:first-child
+    margin-bottom: 30px
   div:last-child
     background-image: url('img/cats.png')
     background-repeat: no-repeat

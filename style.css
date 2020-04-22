@@ -178,16 +178,10 @@ section {
 }
 .large-card div:first-child {
   max-width: 560px;
-  margin-bottom: 30px;
 }
-@media (min-width: 750px) {
+@media (max-width: 749px) {
   .large-card div:last-child {
-    width: 280px;
-  }
-}
-@media (max-width: 750px) {
-  .large-card div:last-child {
-    height: 360px;
+    height: 260px;
   }
 }
 
@@ -223,12 +217,16 @@ section {
   background-color: #FFD100;
   color: #000000;
 }
+#formations div:last-child {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-y: center;
+}
 @media (min-width: 750px) {
-  #formations {
-    background-image: url("img/project_formations.png");
-  }
   #formations div:last-child {
+    background-image: url("img/project_formations.png");
     margin-left: 27px;
+    margin-top: -30px;
     flex: 0 0 18em;
   }
 }
@@ -236,9 +234,11 @@ section {
   #formations div:last-child {
     background-image: url("img/project_formations_mobile.png");
     margin: 0 -30px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position-y: center;
+  }
+}
+@media (max-width: 402px) {
+  #formations div:last-child {
+    height: 170px;
   }
 }
 
@@ -259,6 +259,9 @@ section {
 
 #asura {
   background-color: #8B0BD2;
+}
+#asura div:first-child {
+  margin-bottom: 30px;
 }
 #asura div:last-child {
   background-image: url("img/cats.png");
