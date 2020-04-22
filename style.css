@@ -152,7 +152,7 @@ section {
 @media (min-width: 750px) {
   .card-long {
     max-width: 375px;
-    height: 530px;
+    min-height: 530px;
   }
 }
 @media (max-width: 750px) {
@@ -178,6 +178,7 @@ section {
 }
 .large-card div:first-child {
   max-width: 560px;
+  margin-bottom: 30px;
 }
 @media (min-width: 750px) {
   .large-card div:last-child {
