@@ -2,6 +2,15 @@
 
 const green = '#0CD2A3';
 
+/*** Cats animation ***/
+lottie.loadAnimation({
+    container: document.getElementById('catsanimation'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'img/cats.json'
+});
+
 const skillsList = {
     linkuxuimobile: ['linkbetclic', 'linkpoleemploi', 'linkjobijoba', 'linkerdf', 'linkdroitsfemmes', 'linkexplicite', 'linksunday', 'linkcultura', 'linkdronisos'],
     linkuxuiweb: ['linkbetclic', 'linkbordeaux', 'link33', 'linkgrenelle', 'linksuez', 'linkexplicite', 'linksunday', 'linkpmu', 'linkatos', 'linkdronisos', 'linkgeeksters'],

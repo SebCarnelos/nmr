@@ -186,15 +186,22 @@ section
 #asura
   background-color: $purple
   div:first-child
-    margin-bottom: 30px
+    @media (min-width: $breakpoint-medium)
+      margin-bottom: 30px
   div:last-child
-    background-image: url('img/cats.png')
-    background-repeat: no-repeat
-    background-size: contain
-    background-position: right bottom
+    // border: solid 2px red
+    position: relative
     flex: 0 0 22em
     @media (min-width: $breakpoint-medium)
       margin-left:20px
+    svg
+      // border: solid 2px green
+      position: absolute
+      bottom: 0
+      width: 99% !important
+      height: 70% !important
+      @media (max-width: $breakpoint-medium-minus1)
+        height: 87% !important  
 
 strong
   font-weight: $font-bold

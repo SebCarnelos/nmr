@@ -260,19 +260,29 @@ section {
 #asura {
   background-color: #8B0BD2;
 }
-#asura div:first-child {
-  margin-bottom: 30px;
+@media (min-width: 750px) {
+  #asura div:first-child {
+    margin-bottom: 30px;
+  }
 }
 #asura div:last-child {
-  background-image: url("img/cats.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: right bottom;
+  position: relative;
   flex: 0 0 22em;
 }
 @media (min-width: 750px) {
   #asura div:last-child {
     margin-left: 20px;
+  }
+}
+#asura div:last-child svg {
+  position: absolute;
+  bottom: 0;
+  width: 99% !important;
+  height: 70% !important;
+}
+@media (max-width: 749px) {
+  #asura div:last-child svg {
+    height: 87% !important;
   }
 }
 
