@@ -3,13 +3,20 @@
 const green = '#0CD2A3';
 
 /*** Cats animation ***/
-lottie.loadAnimation({
+const animCats = lottie.loadAnimation({
     container: document.getElementById('catsanimation'),
     renderer: 'svg',
-    loop: true,
+    loop: false,
     autoplay: true,
     path: 'img/cats.json'
 });
+animCats.addEventListener('complete', () => {
+    setTimeout(() => {
+        animCats.goToAndPlay(0);
+    }, 6000);
+});
+
+
 
 const skillsList = {
     linkuxuimobile: ['linkbetclic', 'linkpoleemploi', 'linkjobijoba', 'linkerdf', 'linkdroitsfemmes', 'linkexplicite', 'linksunday', 'linkcultura', 'linkdronisos'],
