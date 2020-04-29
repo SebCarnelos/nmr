@@ -163,7 +163,7 @@ section {
 
 .large-card {
   max-width: 840px;
-  min-height: 360px;
+  min-height: 300px;
   margin-left: auto;
   margin-right: auto;
   background-position-x: right;
@@ -220,7 +220,7 @@ section {
 #formations div:last-child {
   background-size: contain;
   background-repeat: no-repeat;
-  background-position-y: center;
+  background-position: center;
 }
 @media (min-width: 750px) {
   #formations div:last-child {
@@ -259,6 +259,12 @@ section {
 
 #asura {
   background-color: #8B0BD2;
+}
+#asura a {
+  color: #FFFFFF;
+}
+#asura a:hover {
+  text-decoration: none;
 }
 @media (min-width: 750px) {
   #asura div:first-child {
