@@ -378,13 +378,7 @@ address {
   background-color: #0CD2A3;
   padding: 50px 62px;
   margin-top: 70px;
-  margin-bottom: 29px;
-}
-@media (max-width: 750px) {
-  address {
-    margin-top: 42px;
-    margin-bottom: 32px;
-  }
+  margin-bottom: 30px;
 }
 address .container {
   max-width: 900px;
