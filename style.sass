@@ -1,5 +1,8 @@
 @use 'sass:color'
 @import 'reset'
+@font-face
+  font-family: 'Amanise'
+  src: url('font/amanise.otf') format('opentype')
 
 //!\ ATTENTION! En cas de changement de couleur, vérifier dans le code JS si elles ne sont pas reprises /!\\
 $dark-blue: #060717
@@ -13,11 +16,14 @@ $purple: #8B0BD2
 $white: #FFFFFF
 $black : #000000
 $light-grey: #E9E9E9
-$font: Open Sans, Helvetica, Arial, sans-serif
+$font: Roboto, Helvetica, Arial, sans-serif
+$font-condensed: Roboto Condensed, Helvetica, Arial, sans-serif
+$font-title: Amanise, Arial, sans-serif 
 $font-regular: 400
-$font-semibold: 600
+$font-medium: 500
 $font-bold: 700
-$font-extrabold: 800
+$font-normal: normal
+$font-italic: italic
 $breakpoint-medium: 750px
 $breakpoint-medium-minus1: 749px
 $breakpoint-small: 576px
@@ -51,7 +57,7 @@ h1
   margin-top: 13px
   margin-bottom: 3px
 h2
-  font-weight: $font-extrabold
+  font-family: $font-title
   font-size: 34px
   line-height: 40px
 h3
@@ -64,7 +70,7 @@ h4
   opacity: 0.45
   text-transform: uppercase
 h5
-  font-weight: $font-extrabold
+  font-weight: $font-bold
   font-size: 24px
   margin-bottom: 6px
 
@@ -197,7 +203,7 @@ section
     position: relative
     flex: 0 0 22em
     @media (min-width: $breakpoint-medium)
-      margin-left:20px
+      margin-left: 20px
     svg
       position: absolute
       bottom: 0
@@ -253,7 +259,7 @@ strong
     text-transform: none
     color: $white
     opacity: 1
-    font-weight: $font-extrabold
+    font-weight: $font-bold
     font-size: 22px
   li
     display: inline

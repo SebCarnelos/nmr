@@ -1,8 +1,8 @@
 @charset "UTF-8";
-/* http://meyerweb.com/eric/tools/css/reset/ 
- * v2.0 | 20110126
- * License: none (public domain)
- * Changed from CSS to SASS */
+@use 'sass:color' {}/* http://meyerweb.com/eric/tools/css/reset/
+	v2.0 | 20110126
+	License: none (public domain)
+	Changed from CSS to SASS */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -30,7 +30,7 @@ blockquote, q {
 }
 
 blockquote:before, blockquote:after, q:before, q:after {
-  content: "";
+  content: '';
   content: none;
 }
 
@@ -43,16 +43,22 @@ hr {
   border-width: 0;
 }
 
+@font-face {
+  font-family: 'Amanise';
+  src: url("font/amanise.otf") format("opentype");
+}
+
 body {
   margin-top: 102px;
   margin-bottom: 30px;
   background-color: #060717;
-  font-family: Open Sans, Helvetica, Arial, sans-serif;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
   font-weight: 400;
   color: #FFFFFF;
   line-height: 24px;
   font-size: 14px;
 }
+
 @media (max-width: 750px) {
   body {
     margin-top: 72px;
@@ -63,6 +69,7 @@ body {
   margin-left: 62px;
   margin-right: 62px;
 }
+
 @media (max-width: 576px) {
   .body-container {
     margin-left: 20px;
@@ -80,7 +87,7 @@ h1 {
 }
 
 h2 {
-  font-weight: 800;
+  font-family: Amanise, Arial, sans-serif;
   font-size: 34px;
   line-height: 40px;
 }
@@ -99,7 +106,7 @@ h4 {
 }
 
 h5 {
-  font-weight: 800;
+  font-weight: 700;
   font-size: 24px;
   margin-bottom: 6px;
 }
@@ -111,6 +118,7 @@ header {
   margin-right: auto;
   padding-bottom: 115px;
 }
+
 @media (max-width: 750px) {
   header {
     padding-bottom: 80px;
@@ -121,6 +129,7 @@ section {
   border-radius: 5px;
   padding: 30px 30px 0px 30px;
 }
+
 @media (max-width: 750px) {
   section {
     margin-bottom: 20px;
@@ -129,13 +138,18 @@ section {
 
 @media (min-width: 750px) {
   .long-cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .long-cards section:first-of-type {
     margin-right: 30px;
   }
 }
+
 .long-cards section div:last-child {
   background-size: 335px 360px;
   background-repeat: no-repeat;
@@ -147,16 +161,25 @@ section {
 }
 
 .card-long {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
+
 @media (min-width: 750px) {
   .card-long {
     max-width: 375px;
     min-height: 530px;
   }
 }
+
 @media (max-width: 750px) {
   .card-long {
     min-height: 590px;
@@ -172,15 +195,22 @@ section {
   background-repeat: no-repeat;
   background-size: contain;
 }
+
 @media (min-width: 750px) {
   .large-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
+
 .large-card div:first-child {
   max-width: 560px;
 }
+
 @media (max-width: 749px) {
   .large-card div:last-child {
     height: 260px;
@@ -192,6 +222,7 @@ section {
     margin-top: 30px;
   }
 }
+
 #profile {
   width: 122px;
   height: 100%;
@@ -204,6 +235,7 @@ section {
 #betclic {
   background-color: #CE000E;
 }
+
 #betclic div:last-child {
   background-image: url("img/project_image_betclic.png");
 }
@@ -211,6 +243,7 @@ section {
 #poleemploi {
   background: linear-gradient(-34deg, #7132E1 10%, #3843E6 78%, #3644E6 78%);
 }
+
 #poleemploi div:last-child {
   background-image: url("img/project_image_pe.png");
 }
@@ -219,25 +252,31 @@ section {
   background-color: #FFD100;
   color: #000000;
 }
+
 #formations div:last-child {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
+
 @media (min-width: 750px) {
   #formations div:last-child {
     background-image: url("img/project_formations.png");
     margin-left: 27px;
     margin-top: -30px;
-    flex: 0 0 18em;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 18em;
+            flex: 0 0 18em;
   }
 }
+
 @media (max-width: 749px) {
   #formations div:last-child {
     background-image: url("img/project_formations_mobile.png");
     margin: 0 -30px;
   }
 }
+
 @media (max-width: 402px) {
   #formations div:last-child {
     height: 170px;
@@ -247,6 +286,7 @@ section {
 #sunday {
   background-color: #E4015C;
 }
+
 #sunday div:last-child {
   background-image: url("img/project_image_sunday.png");
 }
@@ -255,6 +295,7 @@ section {
   background-color: #0CD2A3;
   color: #000000;
 }
+
 #explicite div:last-child {
   background-image: url("img/project_image_explicite.png");
 }
@@ -262,32 +303,41 @@ section {
 #asura {
   background-color: #8B0BD2;
 }
+
 #asura a {
   color: #FFFFFF;
 }
+
 #asura a:hover {
   text-decoration: none;
 }
+
 @media (min-width: 750px) {
   #asura div:first-child {
     margin-bottom: 30px;
   }
 }
+
 #asura div:last-child {
   position: relative;
-  flex: 0 0 22em;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 22em;
+          flex: 0 0 22em;
 }
+
 @media (min-width: 750px) {
   #asura div:last-child {
     margin-left: 20px;
   }
 }
+
 #asura div:last-child svg {
   position: absolute;
   bottom: 0;
   width: 99% !important;
   height: 70% !important;
 }
+
 @media (max-width: 749px) {
   #asura div:last-child svg {
     height: 87% !important;
@@ -303,26 +353,34 @@ strong {
   margin-top: 62px;
   margin-bottom: 61px;
 }
+
 #pinterest a {
   color: #0CD2A3;
   font-weight: 700;
-  text-decoration-line: none;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
   line-height: 19px;
   padding: 12px 22px 11px 21px;
   border: solid;
   border-width: 2px;
   border-radius: 23px;
   background: none;
+  -webkit-transition-property: color, border-color, background-color;
   transition-property: color, border-color, background-color;
-  transition-duration: 500ms;
-  transition-timing-function: ease-out;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
 }
+
 #pinterest a:hover {
   color: #000000;
   border-color: #0CD2A3;
   background-color: #0CD2A3;
 }
+
 #pinterest a:active {
+  -webkit-transition-property: none;
   transition-property: none;
   background-color: #0ab58d;
   border-color: #0ab58d;
@@ -333,6 +391,7 @@ strong {
   margin-right: auto;
   color: #FFFFFF;
 }
+
 .container hr {
   border-top-width: 1px;
   border-color: #FFFFFF;
@@ -341,26 +400,33 @@ strong {
   margin-bottom: 70px;
   margin-top: 0px;
 }
+
 .container hr:last-of-type {
   margin-top: 70px;
 }
+
 .container h4 {
   text-transform: none;
   color: #FFFFFF;
   opacity: 1;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 22px;
 }
+
 .container li {
   display: inline;
 }
+
 .container li:not(:last-of-type)::after {
-  content: " •";
+  content: ' •';
 }
+
 .container li a {
   color: #E9E9E9;
-  text-decoration-line: none;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
 }
+
 .container li a:hover {
   color: #0CD2A3;
 }
@@ -369,6 +435,7 @@ strong {
   max-width: 900px;
   text-align: center;
 }
+
 .out-of-cards h4 {
   margin-bottom: 20px;
 }
@@ -380,30 +447,38 @@ address {
   margin-top: 70px;
   margin-bottom: 30px;
 }
+
 address .container {
   max-width: 900px;
 }
+
 address .container h4 {
   margin-bottom: 0px;
 }
+
 address p {
   color: #05624C;
   font-weight: 600;
 }
+
 address a {
   color: #000000;
   font-weight: 700;
 }
+
 address a:hover {
-  text-decoration-line: none;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
 }
 
 footer {
   font-size: 12px;
 }
+
 footer div:first-child {
   max-width: 900px;
 }
+
 @media (max-width: 750px) {
   footer div:first-child {
     text-align: center;
@@ -412,24 +487,33 @@ footer div:first-child {
     margin-bottom: 6px;
   }
 }
+
 @media (min-width: 750px) {
   footer div:first-child {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
+
 footer .container {
   color: #E9E9E9;
 }
+
 footer .container li:not(:last-of-type)::after {
-  content: " |";
+  content: ' |';
 }
+
 footer a {
   color: #E9E9E9;
-  text-decoration-line: none;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
 }
+
 footer a:hover {
   color: #0CD2A3;
 }
-
 /*# sourceMappingURL=style.css.map */
